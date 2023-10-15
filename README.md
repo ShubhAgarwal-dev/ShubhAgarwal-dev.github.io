@@ -1,5 +1,5 @@
 # ShubhAgarwal-dev.github.io
-Depeloped using Astro.
+Portfolio website for Shubh Agarwal, still a work in progress, developes using Astro.
 
 ## 🧞 Commands
 
