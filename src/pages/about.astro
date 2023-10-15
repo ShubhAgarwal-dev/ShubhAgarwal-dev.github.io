@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import CallToAction from '../components/CallToAction.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Shubh Agarwal" description="About section of Shubh Agarwal">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<!-- <img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Jeanine White at work with a colleague"
+				/> -->
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Hello, I'm Shubh Agarwal, a passionate and dedicated student with a strong academic background
+						in Computer Science & Engineering. I 'm currently pursuing my Bachelor's degree at the prestigious
+						Indian Institute of Technology (IIT) Dharwad. My journey in the world of technology has been an
+						exciting and enriching one, marked by a relentless pursuit of knowledge and a commitment to pushing
+						the boundaries of what's possible.
+					</p>
+					<p>
+						My skills and expertise encompass a variety of programming languages, tools, and frameworks,
+						equipping me to tackle complex problems and contribute to innovative solutions. I've actively
+						engaged in groundbreaking research projects under the guidance of esteemed professors, with a
+						current focus on Quantum Networking and FPGA implementation. Leadership roles, such as serving
+						as Coding Club Secretary and leading our IIT Dharwad contingent, have enriched my academic journey.
+					</p>
+					<p>
+						As I look ahead, my dedication to technology and innovation remains unwavering. I'm excited
+						to take on new challenges, collaborate with like-minded individuals, and make meaningful
+						contributions to the world of technology. Explore my portfolio to learn more about my work
+						and feel free to connect with me for inquiries or collaboration opportunities. Thank you for
+						taking the time to discover more about me, and I look forward to sharing my journey with you.
+					</p>
+					<!-- <p>
+						My love for learning goes beyond the classroom. I have dived deep into a wide range of subjects,
+						from computer science, mathematics, and artificial intelligence to hardware programming and
+						data analysis. I believe that a strong academic foundation is the cornerstone of innovation,
+						and I'm driven to keep expanding my horizons in these fields.
+					</p>
+					<p>
+						In my pursuit of knowledge, I've honed my skills in various programming languages,
+						tools, and frameworks. From Python to Verilog, Intel Quartus to Next.js, I've
+						equipped myself with the tools needed to tackle complex problems and create
+						innovative solutions. My proficiency in these areas has been demonstrated
+						through my research work and hands-on projects.
+					</p>
+					<p>
+						I've had the privilege of working on groundbreaking research projects under the guidance
+						of esteemed professors. Currently, I'm delving into the fascinating world of Quantum
+						Networking, where I'm implementing LDPC Error Correction Codes for quantum communication 
+						on FPGA. This is just one example of the exciting work I'm involved in, and I'm always eager 
+						to explore new frontiers of technology.
+					</p>
+					<p>
+						As I look ahead, my passion for technology and my dedication to innovation continue to drive me.
+						I'm excited to embrace new challenges, collaborate with like-minded individuals, and
+						make meaningful contributions to the world of technology. Feel free to explore my portfolio
+						and connect with me for any inquiries or collaboration opportunities.
+					</p> -->
+					<p>
+						Thank you for taking the time to learn more about me, and I look forward to engage with you.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>B.Tech, Computer Science & Engineering, IIT Dharwad</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skill</h2>
+				<div class="content">
+					<p>Python, C/C++, Javascript, Typescript, Next JS, React JS, Verilog, VHDL, Intel Quartus, Lattice Diamond/Radiant, Xilinx Vivaldo, Bash, 
+						<a href="https://github.com/lnis-uofu/OpenFPGA" target="_blank">OpenFPGA</a>, <a target="_blank" href="https://github.com/YosysHQ/yosys">Yosys</a></p>
+				</div>
+			</section>
+			<div id="center">
+				<CallToAction href='https://drive.google.com/file/d/174xLpArQs040wAT7bzF5UjMnJcO6_kss/view?usp=sharing'>
+					Resume
+				</CallToAction>
+			</div>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	#center{
+		display: flex;
+		justify-content: center;
+	}
+
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
